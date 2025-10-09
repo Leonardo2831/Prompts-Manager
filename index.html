@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <title>Prompts Manager</title>
+    <link rel="icon" href="public/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="app">
+        <button class="icon-button" data-button-menu="open">
+            <img src="public/images/open.svg" alt="Menu" class="icon">
+        </button>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="public/images/logo.svg" alt="Prompts">
+                </div>
+                <button class="icon-button" data-button-menu="close">
+                    <img src="public/images/collapse.svg" alt="Fechar menu" class="icon">
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <label class="search-container" for="search">
+                    <img src="public/images/search.svg" alt="Pesquisar" class="icon">
+                    <input data-input-search type="text" id="search" placeholder="Buscar por título ...">
+                </label>
+                <button class="flex-full btn-primary btn" data-new-prompt title="Aperte Ctrl + N para criar um novo prompt rapidamente">
+                    Novo prompt
+                </button>
+            </div>
+
+            <ul class="prompt-list" data-prompt-saved ></ul>
+        </aside>
+        <main class="main">
+            <header class="main-header">
+                <button class="btn-outline btn" data-button-copy title="Aperte o atalho Ctrl + C para copiar rapidamente">
+                    <img class="icon" src="public/images/copy.svg" alt="Copiar">
+                    Copiar
+                </button>
+                <button class="btn-primary btn" data-button-save title="Aperte o atalho Ctrl + S ou Enter para salvar rapidamente">Salvar</button>
+            </header>
+            <h1 class="prompt-title" contenteditable="true" data-prompt-title="false" data-placeholder="Título do prompt"></h1>
+            <p class="prompt-content" contenteditable="true" data-prompt-content="false" data-placeholder="Conteúdo do prompt..."></p>
+        </main>
+    </div>
+    <script type="module" src="public/javascript/script.js"></script>
+</body>
+</html>
