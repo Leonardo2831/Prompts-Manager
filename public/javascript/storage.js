@@ -148,9 +148,7 @@ export default function initStorage(){
 
     elements.buttonSave.addEventListener("click", save);
     document.addEventListener("keydown", (event) => {
-        if ((event.key === 'Enter') || 
-            (event.ctrlKey && event.key === 's')
-        ){
+        if (event.ctrlKey && event.key === 's'){
             event.preventDefault();
             save();
         } 
